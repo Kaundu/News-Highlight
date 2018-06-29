@@ -1,0 +1,16 @@
+{% macro displayUpdateList(update_results_list) %}
+
+    {% for update in update_results_list %}
+        <div class="col-md-4 panel panel-primary ">
+
+
+                    <h1>{{ update.id}}</h1>
+
+
+
+                <a href="/templates/update/{{update.id}}">visit</a>
+
+        </div>
+    {% endfor %}
+
+{% endmacro %}
