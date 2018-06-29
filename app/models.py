@@ -7,4 +7,15 @@ class Article:
         self.description = description
         self.url = url  
         self.image = image
-        self.date = date
+        self.date = date        self.date = date
+
+
+class News_Update:
+    '''
+    highlight class to define objects
+    '''
+    def __init__(self, id, name, category, url):
+        self.id = id
+        self.name = name
+        self.category = category
+        self.url = url
