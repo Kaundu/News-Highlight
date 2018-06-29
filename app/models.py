@@ -1,4 +1,4 @@
-# File for models/classes# File for models/classes
+# File for models/classes
 class Article:
     def __init__(self, id, author, title, description, url, image, date):
         self.id = id
@@ -7,7 +7,7 @@ class Article:
         self.description = description
         self.url = url  
         self.image = image
-        self.date = date        self.date = date
+        self.date = date
 
 
 class News_Update:
