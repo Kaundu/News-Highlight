@@ -1,7 +1,12 @@
 from flask import render_template,request,redirect,url_for,abort
 from . import main
+from ..requests import get_updates, get_articles
+
+
 
 # Views
+
+
 @main.route('/')
 def index():
 
@@ -17,10 +22,6 @@ def index():
     title = 'News- Updates'
     return render_template('index.html', title=title,politics=political_articles, business=business_articles, technology=tech, entertainment=entertainment)
 
-    title = 'Home'
-
-    return render_template('index.html', title = title )
-   
 
 @main.route('/templates/update/<id>')
 def source(id):
