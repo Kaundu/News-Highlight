@@ -1,3 +1,4 @@
+{% import 'macros.html' as macro%}
 {% extends 'base.html' %}
 
 <!-- Content block -->
@@ -7,8 +8,39 @@
 
     <div class="container">
 
-        <h1>Home Page</h1>
+        <h1>NEWS TODAY</h1>
 
+        <div class="row">
+          <h2>Technology Section</h2>
+          <div class="col-md-10">
+            <ul>
+              {{ macro.displayUpdateList(technology) }}
+            </ul>
+
+          </div>
+        </div>
     </div>
+    <div class="row">
+      <!-- <h2>politics section</h2>
+  <ul>
+      {{ macro.displayUpdateList(politics) }}
+  </ul> -->
+
+        <h2>business section</h2>
+        <div class="col-md-10">
+          <ul>
+            {{ macro.displayUpdateList(business) }}
+          </ul>
+    </div>
+  </div>
+    <div class="row">
+            <h3>Entertainment Section</h3>
+            <div class="col-md-10">
+        <ul>
+            {{ macro.displayUpdateList(entertainment) }}
+        </ul>
+      </div>
+    </div>
+  </div>
 
 {% endblock %}
