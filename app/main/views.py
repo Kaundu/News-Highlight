@@ -22,3 +22,8 @@ def index():
     return render_template('index.html', title = title )
    
 
+@main.route('/templates/update/<id>')
+def source(id):
+    articles = get_articles(id)
+    print(articles)
+    return render_template('update.html', articles=articles)
